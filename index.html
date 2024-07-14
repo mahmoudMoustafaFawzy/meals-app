@@ -1,0 +1,190 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="bg-black ">
+    <!-------------------------------------------- test------------------------------------------->
+    <!--------- navbar-------- -->
+
+    <section class="nav text-white ">
+        <div class="side-nav-menu min-vh-100 position-fixed d-flex top-0" style="left: -257px;">
+            <div class="nav-tab  d-flex flex-column justify-content-between min-vh-100 p-4">
+                <div class="links">
+                    <ul class="list-unstyled overflow-hidden">
+                        <li id="searchId" class="py-2 position-relative">Search</li>
+                        <li id="catId" class="py-2 position-relative">Categories</li>
+                        <li id="areaId" class="py-2 position-relative">Area</li>
+                        <li id="ingredientsId" class="py-2 position-relative">Ingredients</li>
+                        <li id="contact" class="py-2 position-relative">Contact Us</li>
+                    </ul>
+                </div>
+                <div class="nav-footer">
+                    <div class="icons">
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-solid fa-globe"></i>
+                    </div>
+                    <div class="footer">
+                        <p>Copyright Â© 2019 All Rights <br>Reserved.</p>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="nav-header d-flex flex-column justify-content-between py-4 text-center px-2 bg-white text-black">
+                <img class="logo img-fluid" src="pic/logo.png" alt="" srcset="">
+                <i class="fa-solid  open-close-icon cursor-icon fa-2x fa-align-justify"></i>
+                <div>
+                    <i class="fa-solid cursor-icon fa-globe d-block"></i>
+                    <i class="fa-solid cursor-icon fa-share-nodes"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+    <span class="loader"></span>
+
+
+    <!----------- home--------- -->
+    <section class="pt-5 homedetails ">
+        <div class="container">
+            <div class="row carddy  list-details g-4">
+                
+            </div>
+        </div>
+    </section>
+    <div id="load" class="loading w-100 d-none vh-100 d-flex align-items-center overflow-hidden">
+        <div class="loader mx-auto z-3 text-center">
+        </div>
+    </div>
+    <!-- --------- category---------- -->
+    <section class="pt-5 d-none homedetails">
+        <div class="container">
+
+            <div class="row list-details py-2 g-4">
+
+
+
+
+            </div>
+
+            <div class="row row-cols-1 carddy row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4">
+
+            </div>
+        </div>
+    </section>
+    <!-- -----desicription-------- -->
+    <div class="container d-none details d-flex text-white pb-5 ">
+        <div class="row">
+
+        </div>
+    </div>
+
+    <!-------- search input --------->
+    <section class="search p-5 d-none search   ">
+        <div class="container w-100">
+            <div class="row Datasearch py-2 g-4">
+
+                <div class="row">
+                    <div class=" col-md-6">
+                        <input id="searchname" class="text-white form-control bg-black " placeholder="Search By Name"
+                            type="text">
+                    </div>
+                    <div class="col-md-6">
+                        <input id="SearchLetter" class="form-control bg-black text-white "
+                            placeholder="Search By First Letter" type="text">
+                    </div>
+                </div>
+                <div id="Datasearch" class="row py-2 g-4">
+
+                </div>
+
+
+            </div>
+
+        </div>
+    </section>
+    <!-------- contact as --------->
+    <section class="form contact d-none  ">
+        <div class="container vh-100 w-75 d-flex justify-content-center align-items-center  ">
+            <div class="row gy-3 ">
+                <div class=" col-md-6 dad">
+                    <input onkeyup="valid(this.value)" id="NameId" class="form-control" placeholder="Enter Your Name" type="text">
+                    <div id="nameAleart" class="text-center mt-1 alert alert-danger d-none">Special characters and numbers not allowed</div>
+                </div>
+                <div class=" col-md-6 dad">
+                    <input id="emailId" onkeyup="validEmail(this.value)"  class="form-control  " placeholder="Enter Your Email" type="email">
+                    <div id="emailAleart" class="text-center mt-1 alert alert-danger d-none">Email not valid *exemple@yyy.com</div>
+                </div>
+                <div class=" col-md-6 dad">
+                    <input id="noId" onkeyup="validNo(this.value)" class="form-control  " placeholder="Enter Your Phone" type="number">
+                    <div id="noAleart" class="text-center mt-1 alert alert-danger d-none">Enter valid Phone Number</div>
+                </div>
+                <div class=" col-md-6 dad">
+                    <input id="ageId" onkeyup="validag(this.value)" class="form-control  " placeholder="Enter Your Age" type="number">
+                    <div id="agAleart" class="text-center mt-1 alert alert-danger d-none">Enter valid age</div>
+                </div>
+                <div  class=" col-md-6 dad">
+                    <input id="pass"  onkeyup="validpa(this.value)" class="form-control  " placeholder="Enter Your Password" type="password">
+                    <div id="paAleart" class="text-center mt-1 alert alert-danger d-none">Minimum eight characters, at least one uppercase letter, one lowercase letter and one number</div>
+                </div>
+                <div class=" col-md-6">
+                    <input  onkeyup="validre(this.value)"  id="repass" class="form-control  " placeholder="Repassword" type="password">
+                    <div id="reAleart" class="text-center mt-1 alert alert-danger d-none">Enter valid repassword</div>
+                </div>
+                <div class=" d-flex justify-content-center">
+                    <button class="btn btn-outline-danger">Submit</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- -------------------------area--------------- -->
+    <section class="area text-white d-none ">
+        <div class="container">
+            <div id="rowData" class="row py-5 g-4">
+            </div>
+        </div>
+    </section>
+
+
+    <!-- -----------------------INTEGRATER---------------------- -->
+
+    <section class="text-white int d-none Ingredients">
+        <div class="container">
+            <div id="Dataa" class="row py-5 g-4">
+                <div class="col-md-3">
+                    <div onclick="getIngredientsMeals('Chicken')" class="rounded-2 text-center cursor-pointer">
+                        <i class="fa-solid fa-drumstick-bite fa-4x"></i>
+                        <h3>Chicken</h3>
+                        <p>The chicken is a type of domesticated fowl, a subspecies of the red junglefowl (Gallus
+                            gallus). It is one of</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <SCript src="js/index.js"></SCript>
+</body>
+
+</html>
